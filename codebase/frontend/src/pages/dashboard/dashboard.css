@@ -1,0 +1,387 @@
+.dashboard-page {
+  min-height: 100dvh;
+  background: #e8f6fc;
+}
+
+.dashboard-screen {
+  position: relative;
+  width: min(100vw, 472px);
+  min-height: 100dvh;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 118px;
+  background: #f3f2f8;
+  color: #101828;
+  box-shadow: 0 18px 60px rgba(20, 30, 45, 0.16);
+}
+
+.dashboard-header {
+  position: relative;
+  min-height: 154px;
+  overflow: hidden;
+  padding: 0 15px;
+  background: linear-gradient(135deg, #1088f5 0%, #37c1d8 100%);
+  color: #ffffff;
+}
+
+.dashboard-header::before,
+.dashboard-header::after {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  content: '';
+}
+
+.dashboard-header::before {
+  top: -100px;
+  right: -95px;
+}
+
+.dashboard-header::after {
+  right: -40px;
+  bottom: -150px;
+}
+
+.dashboard-user-row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 54px 54px;
+  align-items: center;
+  gap: 12px;
+  padding-top: 36px;
+}
+
+.user-avatar {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.user-copy {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+
+.user-copy span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.user-copy strong {
+  overflow: hidden;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dashboard-user-row button {
+  position: relative;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 29px;
+}
+
+.notification-button span {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ff6471;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.dashboard-content {
+  position: relative;
+  z-index: 2;
+  margin-top: -28px;
+  padding: 0 15px;
+}
+
+.balance-card,
+.shortcut-card,
+.personal-card {
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.05);
+}
+
+.balance-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 42px 24px;
+  align-items: center;
+  min-height: 112px;
+  padding: 18px 15px;
+}
+
+.balance-card div {
+  display: grid;
+  gap: 13px;
+}
+
+.balance-card span {
+  color: #202330;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.balance-card strong {
+  color: #101828;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.balance-card .anticon {
+  color: #475467;
+  font-size: 25px;
+}
+
+.balance-chevron {
+  justify-self: end;
+}
+
+.shortcut-card {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px 14px;
+  margin-top: 25px;
+  padding: 22px 9px 24px;
+}
+
+.shortcut-item {
+  display: grid;
+  min-width: 0;
+  justify-items: center;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  color: #202330;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.24;
+  white-space: pre-line;
+}
+
+.shortcut-item .anticon {
+  color: #079bd1;
+  font-size: 36px;
+}
+
+.shortcut-item:nth-child(3n) .anticon,
+.shortcut-item:nth-child(7n) .anticon {
+  color: #ff7a1a;
+}
+
+.personal-card {
+  margin-top: 13px;
+  padding: 22px 20px 20px;
+}
+
+.personal-card h2,
+.cashflow-header h2 {
+  margin: 0;
+  color: #101828;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.personal-tile {
+  min-height: 155px;
+  padding: 16px 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.personal-tile strong {
+  display: block;
+  color: #101828;
+  font-size: 19px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1.24;
+}
+
+.personal-tax {
+  position: relative;
+  background: linear-gradient(135deg, #f7d9ff 0%, #f5eaff 100%);
+}
+
+.personal-tax span {
+  position: absolute;
+  bottom: 20px;
+  left: 38px;
+  color: #c45bea;
+  font-size: 32px;
+}
+
+.personal-bank {
+  background:
+    repeating-radial-gradient(
+      circle at 100% 0%,
+      rgba(237, 207, 116, 0.32) 0 2px,
+      transparent 2px 10px
+    ),
+    #fff8df;
+}
+
+.personal-bank a {
+  display: inline-block;
+  margin-top: 22px;
+  color: #079bd1;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cashflow-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  margin-top: 21px;
+}
+
+.cashflow-controls {
+  display: flex;
+  gap: 12px;
+}
+
+.cashflow-controls button {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #d6dae3;
+  border-radius: 11px;
+  background: #ffffff;
+  color: #202330;
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.cashflow-controls button:first-child {
+  width: 44px;
+  font-size: 23px;
+}
+
+.cashflow-controls button:last-child {
+  min-width: 136px;
+  padding: 0 14px;
+}
+
+.dashboard-bottom-nav {
+  position: absolute;
+  right: 19px;
+  bottom: 22px;
+  left: 19px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: 80px;
+  align-items: center;
+  border-radius: 40px;
+  background: #079bdc;
+  box-shadow: 0 14px 28px rgba(7, 155, 220, 0.28);
+}
+
+.dashboard-bottom-nav button {
+  display: grid;
+  min-width: 0;
+  justify-items: center;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.58);
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.dashboard-bottom-nav .anticon {
+  font-size: 27px;
+}
+
+.dashboard-bottom-nav .nav-active {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.dashboard-bottom-nav .nav-plus-button {
+  align-self: center;
+}
+
+.dashboard-bottom-nav .nav-plus {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #079bdc;
+  font-size: 28px;
+}
+
+.dashboard-home-indicator {
+  position: absolute;
+  bottom: 6px;
+  left: 50%;
+  width: 166px;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(40, 44, 52, 0.36);
+  transform: translateX(-50%);
+}
+
+@media (max-width: 390px) {
+  .dashboard-screen {
+    padding-bottom: 112px;
+  }
+
+  .balance-card strong {
+    font-size: 28px;
+  }
+
+  .shortcut-item {
+    font-size: 16px;
+  }
+
+  .dashboard-bottom-nav {
+    right: 14px;
+    left: 14px;
+  }
+}
