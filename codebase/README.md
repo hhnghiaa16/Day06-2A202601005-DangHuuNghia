@@ -1,13 +1,51 @@
 # Codebase
 
-Đây là nơi nhóm nộp toàn bộ phần code của prototype. Mục tiêu là để giảng viên và các nhóm khác nhìn được sản phẩm chạy như thế nào, và mỗi thành viên đã đóng góp ra sao.
+Base code for the MISA-style income and expense management prototype.
 
-## Nhóm cần làm
+## Structure
 
-- Đưa mã nguồn của prototype vào folder này. Nếu prototype được deploy hoặc host ở nơi khác, hãy để lại đường link kèm hướng dẫn truy cập.
-- Trong file `README.md` của nhóm, ghi rõ ba điều: cách chạy prototype (các bước cài đặt và biến môi trường nếu cần), những công cụ và API đã dùng (model AI, framework, công cụ dựng giao diện…), và phần phân công ai làm gì.
-- Mỗi thành viên nên có ít nhất một commit thực chất trong repo — đây là căn cứ để ghi nhận đóng góp của từng người.
+```txt
+codebase/
+  frontend/   React + Vite + TypeScript prototype app
+  backend/    Placeholder for future Python FastAPI backend
+```
 
-## Lưu ý
+## Frontend Stack
 
-Đừng commit những thông tin nhạy cảm như API key hay file `.env`. Nếu prototype cần các biến môi trường, hãy dùng một file `.env.example` để mô tả các biến đó thay vì để lộ giá trị thật.
+- React + Vite + TypeScript
+- Ant Design
+- TanStack Query
+- React Router
+- React Hook Form + Zod
+- Recharts
+- Axios
+
+## Run Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Default URL:
+
+```txt
+http://localhost:5173
+```
+
+Copy `.env.example` to `.env` when the backend API is available.
+
+## Backend Placeholder
+
+The `backend/` folder is intentionally minimal for now. It is reserved for the future Python FastAPI service and should later contain modules such as:
+
+```txt
+app/modules/accounts
+app/modules/categories
+app/modules/transactions
+app/modules/reports
+app/modules/ai
+```
+
+The `ai` module should be added after the core prototype flows are visible.
